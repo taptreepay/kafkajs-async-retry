@@ -7,7 +7,7 @@ import {
   IHeaders,
   KafkaMessage,
   Producer,
-  KafkaJSNonRetriableError,
+  KafkaJSError,
 } from "kafkajs";
 
 /**
@@ -158,7 +158,7 @@ function extractAsyncRetryHeaders(
 }
 
 // we are extending KafkaJSError here to avoid noisy logging that KafkaJS does for non-KafkaJS errors
-class WaitBeforeProcessing extends KafkaJSNonRetriableError {
+class WaitBeforeProcessing extends KafkaJSError {
   constructor(
     public readonly waitMs: number,
     public readonly topic: string,

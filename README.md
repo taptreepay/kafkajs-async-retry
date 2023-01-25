@@ -36,9 +36,9 @@ This module has no other runtime dependencies.
 ### Installation
 
 ```bash
-npm install --save kafkajs-async-retry
+npm install --save @taptreepay/kafkajs-async-retry
 # or using yarn
-yarn add kafkajs-async-retry
+yarn add @taptreepay/kafkajs-async-retry
 ```
 
 ### Compatibility Requirements
